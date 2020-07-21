@@ -10,15 +10,18 @@ function removeFromCart(item, index) {
   window.location.reload()
 }
 
+
+
 function Cart() {
 
+  let component
   let cart = localStorage.getItem('cart') === null ? [] : JSON.parse(localStorage.getItem('cart'))
-  return (
-    <div id="Cart" className="container text-center" style={{ paddingTop: '128px', paddingBottom:'128px' }}>
-      <h1 className="aparey">Cart</h1>
-      <hr />
+  if (cart.length === 0) {
+    component = <h5 className='aparey'>Nothing to see here...</h5>
+  } else {
+    component = <div>
       {cart.map((item, index) => (
-        <CartItem item={item} index={index} removeFromCart={removeFromCart}/>
+        <CartItem item={item} index={index} removeFromCart={removeFromCart} />
       ))}
       <hr />
       <div className="d-flex flex-row justify-content-end">
@@ -28,6 +31,14 @@ function Cart() {
       <div className="d-flex flex-row justify-content-end">
         <Link className='btn custom-btn'>Checkout</Link>
       </div>
+    </div>
+
+  }
+  return (
+    <div id="Cart" className="container text-center" style={{ paddingTop: '128px', paddingBottom: '128px' }}>
+      <h1 className="aparey">Cart</h1>
+      <hr />
+      {component}
     </div>
   )
 }
