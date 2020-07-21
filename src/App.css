@@ -1,0 +1,84 @@
+/* fonts */
+@font-face {
+  font-family: MontserratSemiBold;
+  src: url('assets/Montserrat/Montserrat-SemiBold.ttf');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Arapey;
+  src: url('assets/Arapey/Arapey-Regular.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+#Home {
+  text-align: center;
+}
+
+.navbar {
+  background: transparent
+}
+
+img.carousel {
+  object-fit: cover;
+}
+
+.montserrat {
+  font-family: 'MontserratSemiBold';
+}
+
+.aparey {
+  font-family: 'Arapey';
+}
+
+.motto {
+  padding: 128px;
+  font-size: 24px;
+}
+
+#CollectionsMenu, #FeaturedItems, #Subscribe {
+  font-family: 'Arapey';
+  margin-bottom: 128px;
+}
+
+.custom-btn {
+  font-family: 'MontserratSemiBold';
+  color: white;
+  background-color: black;
+  border-radius: 0;
+}
+
+img.collections {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  height:240px;
+  width:100%;
+  object-fit: cover;
+}
+
+.collections-button {
+  background-size: 100% auto;
+  height: 240px;
+  width: 100%;
+  color: white;
+  font-size: 32px;
+  margin-top: 12px;
+  margin-bottom: 12px;
+  border-radius: 0;
+  background-repeat: no-repeat;
+}
+
+img.itemcard {
+  height: 360px;
+}
+
+#Subscribe {
+  background-color: #f6f6f6;
+  padding:128px
+}
+
+.custom-input {
+  border-width: 0;
+}

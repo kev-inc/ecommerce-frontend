@@ -1,0 +1,38 @@
+import React from 'react'
+import { Carousel } from 'react-bootstrap'
+import slide1 from '../../assets/slide1.jpeg'
+import slide2 from '../../assets/slide2.jpeg'
+import slide3 from '../../assets/slide3.jpeg'
+
+function HomeCarousel() {
+  return (
+    <Carousel>
+
+      <Carousel.Item>
+        <img className="d-block w-100 carousel" height="640px" src={slide1} alt="First slide" />
+        <Carousel.Caption>
+          <h1 className="aparey">Back to School Collection</h1>
+          <button className="btn custom-btn">Shop women</button>
+        </Carousel.Caption>
+      </Carousel.Item>
+
+      <Carousel.Item>
+        <img className="d-block w-100 carousel" height="640px" src={slide2} alt="Third slide" />
+        <Carousel.Caption>
+          <h1 className="aparey">Essential Skincare</h1>
+          <button className="btn custom-btn">Shop skincare</button>
+        </Carousel.Caption>
+      </Carousel.Item>
+
+      <Carousel.Item>
+        <img className="d-block w-100 carousel" height="640px" src={slide3} alt="Third slide" />
+        <Carousel.Caption>
+          <button className="btn custom-btn">Shop sales</button>
+        </Carousel.Caption>
+      </Carousel.Item>
+
+    </Carousel>
+  )
+}
+
+export default HomeCarousel
