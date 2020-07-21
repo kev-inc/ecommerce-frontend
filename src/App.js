@@ -21,13 +21,13 @@ function App() {
       <Switch>
         <Route path='/' exact component={Home} />
         <Route path='/view/:itemId' component={View} />
-        <Route path='/search/:tag' component={SearchPage}/>
-        <Route path='/cart' component={Cart}/>
-        <Route path='/admin' component={Admin}/>
+        <Route path='/search/:tag' component={SearchPage} />
+        <Route path='/cart' component={Cart} />
+        <Route path='/admin' component={Admin} />
       </Switch>
-      <Footer/>
+      <Footer />
     </Router>
-  );
+  )
 }
 
 export default App;

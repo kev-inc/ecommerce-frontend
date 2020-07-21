@@ -2,28 +2,28 @@ export const data = [
   {
     id: 'CC0LNUWAar9',
     name: 'Floral Ruffled Top (Grey)',
-    price: '10',
+    price: 10,
     img: ['https://instagram.fsin7-1.fna.fbcdn.net/v/t51.2885-15/sh0.08/e35/p640x640/109728769_180032726815180_7341501469048060270_n.jpg?_nc_ht=instagram.fsin7-1.fna.fbcdn.net&_nc_cat=104&_nc_ohc=RvRnbiQdALUAX_3OYjX&oh=dbd89e43097612a4fd66a37d3faabd29&oe=5F3FC17E'],
     tags: ['tops', 'women']
   },
   {
     id: 'CC0LLT5AILE',
     name: 'Floral Ruffled Top (Pink)',
-    price: '10',
+    price: 10,
     img: ['https://instagram.fsin7-1.fna.fbcdn.net/v/t51.2885-15/e35/p1080x1080/108993844_125418432566108_8216893948561821154_n.jpg?_nc_ht=instagram.fsin7-1.fna.fbcdn.net&_nc_cat=108&_nc_ohc=tWGVDw1RTLwAX9VpQev&oh=6bf01345d15c8b4be8be662f7df580ce&oe=5F401EA5'],
     tags: ['tops', 'women']
   },
   {
     id: 'CC0LJ6WgWqV',
     name: 'Floral Ruffled Top (Blue)',
-    price: '10',
+    price: 10,
     img: ['https://instagram.fsin7-1.fna.fbcdn.net/v/t51.2885-15/sh0.08/e35/p640x640/109464835_886996525127751_4254682629059007327_n.jpg?_nc_ht=instagram.fsin7-1.fna.fbcdn.net&_nc_cat=103&_nc_ohc=5-S3But8VSgAX_biF9j&oh=3cb164238453ad474cc4c1226e40f68f&oe=5F3FDF8B'],
     tags: ['tops', 'women']
   },
   {
     id: 'CC0K3s5gCBf',
     name: 'Classic Office Sweater',
-    price: '10',
+    price: 10,
     img: [
       'https://instagram.fsin7-1.fna.fbcdn.net/v/t51.2885-15/sh0.08/e35/p640x640/113790250_172988580874427_8853710372828726168_n.jpg?_nc_ht=instagram.fsin7-1.fna.fbcdn.net&_nc_cat=111&_nc_ohc=NsrDPyfMWRQAX9AXeRK&oh=2271f132e3d6a368c1b64deda5cef8ed&oe=5F3F390D',
       'https://instagram.fsin7-1.fna.fbcdn.net/v/t51.2885-15/sh0.08/e35/p640x640/109728769_277555153526126_2937544803265236262_n.jpg?_nc_ht=instagram.fsin7-1.fna.fbcdn.net&_nc_cat=102&_nc_ohc=46YrznppiMwAX_PHm8w&oh=606061a63f04454b85c506ecb3eee60e&oe=5F3F41C6',
@@ -34,7 +34,7 @@ export const data = [
   {
     id: 'B_9uzVgAIYj',
     name: 'Button Down Jeans Skirt',
-    price: '7',
+    price: 7,
     img: [
       'https://instagram.fsin7-1.fna.fbcdn.net/v/t51.2885-15/sh0.08/e35/p640x640/96685899_694125927823581_1984187865151131139_n.jpg?_nc_ht=instagram.fsin7-1.fna.fbcdn.net&_nc_cat=109&_nc_ohc=bndq52eY9fIAX9Qvnu4&oh=dfef10888b20adae35560cb22fdab1a9&oe=5F412D5E',
       'https://instagram.fsin7-1.fna.fbcdn.net/v/t51.2885-15/sh0.08/e35/p640x640/95979844_600660540538052_2477748181949920934_n.jpg?_nc_ht=instagram.fsin7-1.fna.fbcdn.net&_nc_cat=108&_nc_ohc=O0RCXrVT_-oAX80etOe&oh=dc467a0023c46a4d6a986fe9ae6276a6&oe=5F41BC87'

@@ -6,7 +6,7 @@ function SearchPage(props) {
   const tag = props.match.params.tag
 
   return (
-    <div id="SearchPage" className="container text-center" style={{paddingTop: '128px'}}>
+    <div id="SearchPage" className="container text-center" style={{paddingTop: '128px', paddingBottom: '128px'}}>
       <h1 className="aparey">{tag}</h1>
       <div>
         Sort by
