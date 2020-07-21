@@ -8,6 +8,7 @@ import {
 } from "react-router-dom";
 import Home from './pages/home/Home'
 import Navbar from './components/Navbar';
+import View from './pages/item/View';
 
 function App() {
   return (
@@ -15,9 +16,10 @@ function App() {
     <Router>
       <Navbar/>
       <Switch>
-        <Route path='/'>
-          <Home/>
-        </Route>
+        <Route path='/' exact component={Home} />
+        <Route path='/view/:itemId' component={View} />
+
+
       </Switch>
     </Router>
   );

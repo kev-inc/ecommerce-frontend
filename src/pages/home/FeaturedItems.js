@@ -1,8 +1,6 @@
 import React from 'react'
 import ItemCard from '../../components/ItemCard'
-import item1 from '../../assets/item1.jpg'
-import item2 from '../../assets/item2.jpg'
-import item3 from '../../assets/item3.jpg'
+import { data } from '../../assets/mockdata'
 
 function FeaturedItems() {
   return (
@@ -12,24 +10,11 @@ function FeaturedItems() {
 
       <div className="grid">
         <div className="row">
-          <div className="col">
-            <ItemCard 
-              img={item1}
-              title='Floral Ruffled Top (Grey)'
-              price='10'/>
-          </div>
-          <div className="col">
-            <ItemCard 
-              img={item2}
-              title='Floral Ruffled Top (Pink)'
-              price='10'/>
-          </div>
-          <div className="col">
-            <ItemCard 
-              img={item3}
-              title='Floral Ruffled Top (Blue)'
-              price='10'/>
-          </div>
+          {data.map((item, index) => (
+            <div className="col">
+              <ItemCard details={item}/>
+            </div>
+          ))}
         </div>
       </div>
     </div>
