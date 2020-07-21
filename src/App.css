@@ -70,10 +70,6 @@ img.collections {
   background-repeat: no-repeat;
 }
 
-img.itemcard {
-  height: 360px;
-}
-
 #Subscribe {
   background-color: #f6f6f6;
   padding:128px
@@ -89,3 +85,4 @@ img.itemcard {
   height:360px;
   width: 100%;
 }
+

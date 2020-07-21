@@ -24,10 +24,10 @@ function View(props) {
     <div id="View">
       <div className="grid container">
         <div className="row" style={{paddingTop: '128px'}}>
-          <div className="col">
+          <div className="col-md-6 col-12">
             <ItemCarousel imgs={item.img}/>
           </div>
-          <div className="col my-auto text-center">
+          <div className="col-md-6 col-12 my-auto text-center">
             <h1 className="aparey mb-4">{item.name}</h1>
             <h3 className="montserrat mb-4">${item.price}</h3>
             <hr/>

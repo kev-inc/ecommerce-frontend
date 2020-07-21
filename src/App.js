@@ -12,10 +12,10 @@ import View from './pages/item/View';
 import SearchPage from './pages/search/SearchPage';
 import Footer from './components/Footer';
 import Cart from './pages/cart/Cart';
+import Admin from './pages/admin/Admin';
 
 function App() {
   return (
-
     <Router>
       <Navbar/>
       <Switch>
@@ -23,6 +23,7 @@ function App() {
         <Route path='/view/:itemId' component={View} />
         <Route path='/search/:tag' component={SearchPage}/>
         <Route path='/cart' component={Cart}/>
+        <Route path='/admin' component={Admin}/>
       </Switch>
       <Footer/>
     </Router>

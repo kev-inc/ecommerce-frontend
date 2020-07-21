@@ -11,7 +11,7 @@ function FeaturedItems() {
       <div className="grid">
         <div className="row">
           {data.filter((item, index) => index < 3).map((item, index) => (
-            <div className="col" key={index}>
+            <div className="col-md-4 col-6" key={index}>
               <ItemCard details={item}/>
             </div>
           ))}
