@@ -1,5 +1,5 @@
 import React from 'react'
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 import top from '../../assets/slide1.jpeg'
 import bottom from '../../assets/bottom.jpeg'
@@ -12,21 +12,41 @@ function CollectionsMenu() {
       <h1>Featured Collections</h1>
       <hr />
       <div className="grid">
-        <div className="row">
+        <div className="row mb-4">
           <div className="col">
-            <Link className="btn collections-button" style={{ backgroundImage: `url(${top})` }} to='/search/tops'>Tops</Link>
+            <Link className="card bg-dark text-white" to='/search/tops'>
+              <img src={top} alt='top' style={{ objectFit: 'cover', height: '240px', opacity: 0.5 }} />
+              <div class="card-img-overlay d-flex align-items-center justify-content-center">
+                <h3 class="card-title">Tops</h3>
+              </div>
+            </Link>
           </div>
           <div className="col">
-            <Link className="btn collections-button" style={{ backgroundImage: `url(${skincare})` }} to='/search/skincare'>Skincare</Link>
+            <Link className="card bg-dark text-white" to='/search/skincare'>
+              <img src={skincare} alt='top' style={{ objectFit: 'cover', height: '240px', opacity: 0.5 }} />
+              <div class="card-img-overlay d-flex align-items-center justify-content-center">
+                <h3 class="card-title">Skincare</h3>
+              </div>
+            </Link>
           </div>
         </div>
 
         <div className="row">
           <div className="col">
-            <Link className="btn collections-button" style={{ backgroundImage: `url(${bottom})` }} to='/search/bottoms'>Bottoms</Link>
+            <Link className="card bg-dark text-white" to='/search/bottoms'>
+              <img src={bottom} alt='top' style={{ objectFit: 'cover', height: '240px', opacity: 0.5 }} />
+              <div class="card-img-overlay d-flex align-items-center justify-content-center">
+                <h3 class="card-title">Bottoms</h3>
+              </div>
+            </Link>
           </div>
           <div className="col">
-            <Link className="btn collections-button" style={{ backgroundImage: `url(${sale})` }} to='/search/sale'>Sale</Link>
+            <Link className="card bg-dark text-white" to='/search/sale'>
+              <img src={sale} alt='top' style={{ objectFit: 'cover', height: '240px', opacity: 0.5 }} />
+              <div class="card-img-overlay d-flex align-items-center justify-content-center">
+                <h3 class="card-title">Sale</h3>
+              </div>
+            </Link>
           </div>
         </div>
       </div>

@@ -4,21 +4,21 @@ export const data = [
     name: 'Floral Ruffled Top (Grey)',
     price: '10',
     img: ['https://instagram.fsin7-1.fna.fbcdn.net/v/t51.2885-15/sh0.08/e35/p640x640/109728769_180032726815180_7341501469048060270_n.jpg?_nc_ht=instagram.fsin7-1.fna.fbcdn.net&_nc_cat=104&_nc_ohc=RvRnbiQdALUAX_3OYjX&oh=dbd89e43097612a4fd66a37d3faabd29&oe=5F3FC17E'],
-    tags: ['tops']
+    tags: ['tops', 'women']
   },
   {
     id: 'CC0LLT5AILE',
     name: 'Floral Ruffled Top (Pink)',
     price: '10',
     img: ['https://instagram.fsin7-1.fna.fbcdn.net/v/t51.2885-15/e35/p1080x1080/108993844_125418432566108_8216893948561821154_n.jpg?_nc_ht=instagram.fsin7-1.fna.fbcdn.net&_nc_cat=108&_nc_ohc=tWGVDw1RTLwAX9VpQev&oh=6bf01345d15c8b4be8be662f7df580ce&oe=5F401EA5'],
-    tags: ['tops']
+    tags: ['tops', 'women']
   },
   {
     id: 'CC0LJ6WgWqV',
     name: 'Floral Ruffled Top (Blue)',
     price: '10',
     img: ['https://instagram.fsin7-1.fna.fbcdn.net/v/t51.2885-15/sh0.08/e35/p640x640/109464835_886996525127751_4254682629059007327_n.jpg?_nc_ht=instagram.fsin7-1.fna.fbcdn.net&_nc_cat=103&_nc_ohc=5-S3But8VSgAX_biF9j&oh=3cb164238453ad474cc4c1226e40f68f&oe=5F3FDF8B'],
-    tags: ['tops']
+    tags: ['tops', 'women']
   },
   {
     id: 'CC0K3s5gCBf',
@@ -29,7 +29,7 @@ export const data = [
       'https://instagram.fsin7-1.fna.fbcdn.net/v/t51.2885-15/sh0.08/e35/p640x640/109728769_277555153526126_2937544803265236262_n.jpg?_nc_ht=instagram.fsin7-1.fna.fbcdn.net&_nc_cat=102&_nc_ohc=46YrznppiMwAX_PHm8w&oh=606061a63f04454b85c506ecb3eee60e&oe=5F3F41C6',
       'https://instagram.fsin7-1.fna.fbcdn.net/v/t51.2885-15/sh0.08/e35/p640x640/110067680_605741323411201_8546206453090982174_n.jpg?_nc_ht=instagram.fsin7-1.fna.fbcdn.net&_nc_cat=101&_nc_ohc=8--oRDnpalsAX8hwKRo&oh=122287212d20526c6ae2aff132fcd6eb&oe=5F3FE532'
     ],
-    tags: ['tops']
+    tags: ['tops', 'women']
   },
   {
     id: 'B_9uzVgAIYj',
@@ -39,7 +39,7 @@ export const data = [
       'https://instagram.fsin7-1.fna.fbcdn.net/v/t51.2885-15/sh0.08/e35/p640x640/96685899_694125927823581_1984187865151131139_n.jpg?_nc_ht=instagram.fsin7-1.fna.fbcdn.net&_nc_cat=109&_nc_ohc=bndq52eY9fIAX9Qvnu4&oh=dfef10888b20adae35560cb22fdab1a9&oe=5F412D5E',
       'https://instagram.fsin7-1.fna.fbcdn.net/v/t51.2885-15/sh0.08/e35/p640x640/95979844_600660540538052_2477748181949920934_n.jpg?_nc_ht=instagram.fsin7-1.fna.fbcdn.net&_nc_cat=108&_nc_ohc=O0RCXrVT_-oAX80etOe&oh=dc467a0023c46a4d6a986fe9ae6276a6&oe=5F41BC87'
     ],
-    tags: ['bottoms']
+    tags: ['bottoms', 'women']
   },
 ]
 
