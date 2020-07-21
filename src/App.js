@@ -9,6 +9,7 @@ import {
 import Home from './pages/home/Home'
 import Navbar from './components/Navbar';
 import View from './pages/item/View';
+import SearchPage from './pages/search/SearchPage';
 
 function App() {
   return (
@@ -18,7 +19,7 @@ function App() {
       <Switch>
         <Route path='/' exact component={Home} />
         <Route path='/view/:itemId' component={View} />
-
+        <Route path='/search/:tag' component={SearchPage}/>
 
       </Switch>
     </Router>

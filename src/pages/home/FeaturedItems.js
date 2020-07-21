@@ -11,7 +11,7 @@ function FeaturedItems() {
       <div className="grid">
         <div className="row">
           {data.map((item, index) => (
-            <div className="col">
+            <div className="col" key={index}>
               <ItemCard details={item}/>
             </div>
           ))}
