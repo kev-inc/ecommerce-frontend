@@ -13,7 +13,7 @@ function SearchPage(props) {
       </div>
 
       <div className="grid">
-        <div className="row aparey">
+        <div className="row aparey mb-4">
           {data.filter(item => item.tags.includes(tag)).map((item, index) => (
             <div className="col-4" key={index} style={{paddingTop: '64px'}}>
               <ItemCard details={item} />
