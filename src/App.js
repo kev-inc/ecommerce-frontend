@@ -7,7 +7,7 @@ import {
   Route,
 } from "react-router-dom";
 import Home from './pages/home/Home'
-import Navbar from './components/Navbar';
+import MyNavbar from './components/MyNavbar';
 import View from './pages/item/View';
 import SearchPage from './pages/search/SearchPage';
 import Footer from './components/Footer';
@@ -17,7 +17,7 @@ import Admin from './pages/admin/Admin';
 function App() {
   return (
     <Router>
-      <Navbar/>
+      <MyNavbar/>
       <Switch>
         <Route path='/' exact component={Home} />
         <Route path='/view/:itemId' component={View} />
