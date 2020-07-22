@@ -1,6 +1,5 @@
 import React from 'react'
 import CartItem from './CartItem'
-import { Link } from 'react-router-dom'
 import {addNewProduct} from '../../firebase/Firebase'
 
 function removeFromCart(item, index) {

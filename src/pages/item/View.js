@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react'
-import { data } from '../../assets/mockdata'
 import ItemCarousel from './ItemCarousel'
 import { getProduct } from '../../firebase/Firebase'
 
