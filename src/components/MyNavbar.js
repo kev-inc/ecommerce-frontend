@@ -12,6 +12,7 @@ function MyNavbar() {
           <Nav.Link href="/search/bottoms">Bottoms</Nav.Link>
           <Nav.Link href="/search/skincare">Skincare</Nav.Link>
           <Nav.Link href="/search/sale">Sale</Nav.Link>
+          <Nav.Link href="/cart">Cart</Nav.Link>
         </Nav>
       </Navbar.Collapse>
     </Navbar>
