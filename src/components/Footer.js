@@ -10,6 +10,7 @@ function Footer() {
             <Link className='text-dark'>Return Policy</Link><br/>
             <Link className='text-dark'>Contact Us</Link><br/>
             <Link className='text-dark'>About Us</Link><br/>
+            <Link className='text-dark' to='/admin'>Admin</Link><br/>
           </div>
 
           <div className="col-3">

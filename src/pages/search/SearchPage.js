@@ -1,9 +1,21 @@
-import React from 'react'
-import { data } from '../../assets/mockdata'
+import React, { useState, useEffect } from 'react'
 import ItemCard from '../../components/ItemCard'
+import { getCategoryProducts } from '../../firebase/Firebase'
 
 function SearchPage(props) {
+  const [products, setproducts] = useState([])
   const tag = props.match.params.tag
+  useEffect(() => {
+    if(products.length === 0) {
+      getCategoryProducts(tag)
+        .then(res => setproducts(res))
+    }
+    return
+  }, [products, tag])
+
+  if(products.length === 0) {
+    return <div>Loading...</div>
+  }
 
   return (
     <div id="SearchPage" className="container text-center" style={{paddingTop: '128px', paddingBottom: '128px'}}>
@@ -14,9 +26,9 @@ function SearchPage(props) {
 
       <div className="grid pt-4">
         <div className="row aparey">
-          {data.filter(item => item.tags.includes(tag)).map((item, index) => (
+          {products.map((item, index) => (
             <div className="col-md-4 col-6" key={index}>
-              <ItemCard details={item} />
+              <ItemCard details={item[1]} id={item[0]} />
             </div>
           ))}
         </div>

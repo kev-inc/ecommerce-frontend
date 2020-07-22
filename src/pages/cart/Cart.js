@@ -1,6 +1,7 @@
 import React from 'react'
 import CartItem from './CartItem'
 import { Link } from 'react-router-dom'
+import {addNewProduct} from '../../firebase/Firebase'
 
 function removeFromCart(item, index) {
   let cart = localStorage.getItem('cart') === null ? [] : JSON.parse(localStorage.getItem('cart'))
@@ -8,6 +9,11 @@ function removeFromCart(item, index) {
   localStorage.setItem('cart', JSON.stringify(cart))
   alert(item.name + ' removed from cart!')
   window.location.reload()
+}
+
+function checkout(item) {
+  const result = addNewProduct(item)
+  console.log(result)
 }
 
 
@@ -29,7 +35,8 @@ function Cart() {
         <h5 className="montserrat">${cart.map(item => parseInt(item.price)).reduce((total, item) => total + item)}</h5>
       </div>
       <div className="d-flex flex-row justify-content-end">
-        <Link className='btn custom-btn'>Checkout</Link>
+        {/* <Link className='btn custom-btn'>Checkout</Link> */}
+        <button className="btn custom-btn" onClick={() => checkout(cart)}>Checkout</button>
       </div>
     </div>
 

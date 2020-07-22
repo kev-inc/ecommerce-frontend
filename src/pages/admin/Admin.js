@@ -1,26 +1,19 @@
 import React from 'react'
+import AdminNavbar from './AdminNavbar'
+import { Route, useLocation, Redirect } from 'react-router-dom'
+import DashboardPage from './DashboardPage'
+import ProductsPage from './ProductsPage'
+import AddNewProductPage from './AddNewProductPage'
 
-function Admin() {
+function Admin(props) {
+  const path = useLocation().pathname
   return (
     <div id="Admin">
-      <div className="container-fluid">
-        <div className="row">
-          <div className="col-3">
-            <ul>
-              <li>
-                My Products
-              </li>
-              <li>
-                My Orders
-              </li>
-            </ul>
-          </div>
-          <div className="col-9">
-            main
-          </div>
-        </div>
-      </div>
-
+      <AdminNavbar path={path}/>
+      <Route path='/admin/dashboard' component={DashboardPage}/>
+      <Route path='/admin/products' component={ProductsPage}/>
+      <Route path='/admin/addnewproduct' component={AddNewProductPage}/>
+      <Redirect to='/admin/dashboard'/>
     </div>
   )
 }
