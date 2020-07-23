@@ -58,7 +58,7 @@ function View(props) {
             <hr />
             <div className="input-group mb-3 d-flex justify-content-center">
               <div className="input-group-prepend">
-                <button className="btn" style={style.addToCart} type="button" onClick={() => setquantity(Math.max(product['quantity'], quantity-1))}>-</button>
+                <button className="btn" style={style.addToCart} type="button" onClick={() => setquantity(Math.max(1, quantity-1))}>-</button>
               </div>
               <input disabled type="text" className='text-center' style={{width: '48px'}} value={quantity}/>
               <div className="input-group-append">
