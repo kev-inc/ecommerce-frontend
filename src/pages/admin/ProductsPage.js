@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { getAllProducts, deleteProduct } from '../../firebase/Firebase'
 import { Badge, Button, Table } from 'react-bootstrap'
+import Loading from '../../components/Loading'
 
 function deleteProd(id) {
   deleteProduct(id)
@@ -21,8 +22,11 @@ function ProductsPage() {
     }
     return
   }, [products])
+  if(products.length === 0) {
+    return(<Loading/>)
+  }
   return (
-    <div id="ProductsPage" className='container p-4'>
+    <div id="ProductsPage">
       <Table striped bordered hover>
         <thead>
           <tr>

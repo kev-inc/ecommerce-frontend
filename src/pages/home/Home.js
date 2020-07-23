@@ -15,10 +15,7 @@ function Home() {
         <CollectionsMenu/>
         <FeaturedItems/>
       </div>
-
       <Subscribe/>
-
-
     </div>
   )
 }

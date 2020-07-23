@@ -16,16 +16,16 @@ function CollectionsMenu() {
           <div className="col">
             <Link className="card bg-dark text-white" to='/search/tops'>
               <img src={top} alt='top' style={{ objectFit: 'cover', height: '240px', opacity: 0.5 }} />
-              <div class="card-img-overlay d-flex align-items-center justify-content-center">
-                <h3 class="card-title">Tops</h3>
+              <div className="card-img-overlay d-flex align-items-center justify-content-center">
+                <h3 className="card-title">Tops</h3>
               </div>
             </Link>
           </div>
           <div className="col">
             <Link className="card bg-dark text-white" to='/search/skincare'>
               <img src={skincare} alt='top' style={{ objectFit: 'cover', height: '240px', opacity: 0.5 }} />
-              <div class="card-img-overlay d-flex align-items-center justify-content-center">
-                <h3 class="card-title">Skincare</h3>
+              <div className="card-img-overlay d-flex align-items-center justify-content-center">
+                <h3 className="card-title">Skincare</h3>
               </div>
             </Link>
           </div>
@@ -35,16 +35,16 @@ function CollectionsMenu() {
           <div className="col">
             <Link className="card bg-dark text-white" to='/search/bottoms'>
               <img src={bottom} alt='top' style={{ objectFit: 'cover', height: '240px', opacity: 0.5 }} />
-              <div class="card-img-overlay d-flex align-items-center justify-content-center">
-                <h3 class="card-title">Bottoms</h3>
+              <div className="card-img-overlay d-flex align-items-center justify-content-center">
+                <h3 className="card-title">Bottoms</h3>
               </div>
             </Link>
           </div>
           <div className="col">
             <Link className="card bg-dark text-white" to='/search/sale'>
               <img src={sale} alt='top' style={{ objectFit: 'cover', height: '240px', opacity: 0.5 }} />
-              <div class="card-img-overlay d-flex align-items-center justify-content-center">
-                <h3 class="card-title">Sale</h3>
+              <div className="card-img-overlay d-flex align-items-center justify-content-center">
+                <h3 className="card-title">Sale</h3>
               </div>
             </Link>
           </div>

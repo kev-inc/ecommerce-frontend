@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { getAllOrders } from '../../firebase/Firebase'
 import { Button, Table } from 'react-bootstrap'
+import Loading from '../../components/Loading'
 
 function OrdersPage() {
   const [orders, setorders] = useState([])
@@ -14,10 +15,10 @@ function OrdersPage() {
     return
   }, [orders])
   if (orders.length === 0) {
-    return (<div></div>)
+    return (<Loading/>)
   }
   return (
-    <div className='container p-4'>
+    <div>
       <Table striped bordered hover>
         <thead>
           <tr>

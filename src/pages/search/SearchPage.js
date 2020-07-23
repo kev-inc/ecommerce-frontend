@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import ItemCard from '../../components/ItemCard'
 import { getCategoryProducts } from '../../firebase/Firebase'
 import { Dropdown } from 'react-bootstrap'
+import Loading from '../../components/Loading'
 
 function SearchPage(props) {
   const [products, setproducts] = useState([])
@@ -15,7 +16,7 @@ function SearchPage(props) {
   }, [products, tag])
 
   if (products.length === 0) {
-    return <div>Loading...</div>
+    return <Loading/>
   }
 
   return (

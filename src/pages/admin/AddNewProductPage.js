@@ -11,24 +11,19 @@ function addProduct(event) {
     img: event.target.formImage.value.split(',').map(img => img.trim()),
     tags: event.target.formTags.value.split(',').map(tag => tag.trim())
   }
-  console.log(postData)
   addNewProduct(postData)
     .then(() => alert('Product uploaded!'))
     .catch(() => alert('Error creating product'))
-
-
 }
 
 function AddNewProductPage() {
+  
   return (
-    <div id="AddNewProductPage" className='container p-4'>
+    <div id="AddNewProductPage">
       <Form onSubmit={addProduct}>
         <Form.Group controlId="formName">
           <Form.Label>Name of product</Form.Label>
           <Form.Control type="text" placeholder="Enter name" />
-          {/* <Form.Text className="text-muted">
-            We'll never share your email with anyone else.
-          </Form.Text> */}
         </Form.Group>
 
         <Form.Group controlId="formPrice">
@@ -44,10 +39,11 @@ function AddNewProductPage() {
         <Form.Group controlId="formImage">
           <Form.Label>Image URL</Form.Label>
           <Form.Control type="text" placeholder="Enter image link" />
+          
         </Form.Group>
 
         <Form.Group controlId="formTags">
-          <Form.Label>Tags</Form.Label>
+          <Form.Label>Tags (seperated by commas)</Form.Label>
           <Form.Control type="text" placeholder="Enter tags" />
         </Form.Group>
 

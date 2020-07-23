@@ -4,7 +4,7 @@ import { Nav } from 'react-bootstrap'
 function AdminNavbar(props) {
   
   return (
-    <Nav variant="tabs" activeKey={props.path} className='container'>
+    <Nav variant="pills" activeKey={props.path} className='p-2'>
       <Nav.Item>
         <Nav.Link href="/admin/dashboard">Dashboard</Nav.Link>
       </Nav.Item>

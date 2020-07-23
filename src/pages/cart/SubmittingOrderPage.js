@@ -1,7 +1,11 @@
 import React, { useState, useEffect } from 'react'
 import { submitOrder } from '../../firebase/Firebase'
 
-
+function sendEmail(firstname, email) {
+  return window.emailjs.send(
+    'gmail', 'ordersubmitted', {buyerName: firstname, buyer: email}
+  )
+}
 
 function SubmittingOrderPage(props) {
 
@@ -27,21 +31,17 @@ function SubmittingOrderPage(props) {
         itemDetails: filteredCart,
         timestamp: timestamp
       }).then(res => {
-        setsent(true)
+        sendEmail(buyerDetails.firstname, buyerDetails.email).then(res => {
+          setsent(true)
+          localStorage.removeItem('cart')
+          alert('Your order has been sent!')
+          props.history.push('/')
+        })
+        .catch(err => console.log(err))
       })
     }
     return
   })
-
-
-
-  if (sent) {
-    return (
-      <div>
-        Order submitted!
-      </div>
-    )
-  }
 
   return (
     <div>

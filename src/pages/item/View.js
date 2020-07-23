@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import ItemCarousel from './ItemCarousel'
 import { getProduct } from '../../firebase/Firebase'
+import Loading from '../../components/Loading'
 
 const style = {
   addToCart: {
@@ -41,7 +42,7 @@ function View(props) {
   }, [product, itemId])
 
   if (product === null) {
-    return <div>Loading...</div>
+    return <Loading/>
   }
 
   return (
@@ -55,13 +56,13 @@ function View(props) {
             <h1 className="aparey mb-4">{product.name}</h1>
             <h3 className="montserrat mb-4">${product.price}</h3>
             <hr />
-            <div class="input-group mb-3 d-flex justify-content-center">
-              <div class="input-group-prepend">
-                <button class="btn" style={style.addToCart} type="button" onClick={() => setquantity(Math.max(product['quantity'], quantity-1))}>-</button>
+            <div className="input-group mb-3 d-flex justify-content-center">
+              <div className="input-group-prepend">
+                <button className="btn" style={style.addToCart} type="button" onClick={() => setquantity(Math.max(product['quantity'], quantity-1))}>-</button>
               </div>
               <input disabled type="text" className='text-center' style={{width: '48px'}} value={quantity}/>
-              <div class="input-group-append">
-                <button class="btn" style={style.buyNow} type="button" onClick={() => setquantity(Math.min(product['quantity'], quantity+1))}>+</button>
+              <div className="input-group-append">
+                <button className="btn" style={style.buyNow} type="button" onClick={() => setquantity(Math.min(product['quantity'], quantity+1))}>+</button>
               </div>
             </div>
             <button className="btn montserrat mr-4" style={style.addToCart} onClick={() => addToCart(itemId, product, quantity)}>Add to cart</button>
