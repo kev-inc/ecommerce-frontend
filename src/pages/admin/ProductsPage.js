@@ -22,7 +22,7 @@ function ProductsPage() {
     return
   }, [products])
   return (
-    <div id="ProductsPage" className='p-4'>
+    <div id="ProductsPage" className='container p-4'>
       <Table striped bordered hover>
         <thead>
           <tr>

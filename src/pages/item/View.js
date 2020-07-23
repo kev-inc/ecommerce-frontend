@@ -17,15 +17,18 @@ const style = {
   }
 }
 
-function addToCart(item) {
+function addToCart(id, item, quantitySelected) {
   let cart = localStorage.getItem('cart') === null ? [] : JSON.parse(localStorage.getItem('cart'))
-  cart.push(item)
+
+  cart.push({id, item, quantitySelected})
   localStorage.setItem('cart', JSON.stringify(cart))
   alert(item.name + ' added to cart!')
 }
 
 function View(props) {
   const [product, setproduct] = useState(null)
+  const [quantity, setquantity] = useState(1)
+
   const itemId = props.match.params.itemId
 
   useEffect(() => {
@@ -45,14 +48,23 @@ function View(props) {
     <div id="View">
       <div className="grid container">
         <div className="row" style={{ paddingTop: '128px', paddingBottom: '128px' }}>
-          <div className="col-md-6 col-12">
+          <div className="col-md-6 col-12 d-flex justify-content-center">
             <ItemCarousel imgs={product.img} />
           </div>
           <div className="col-md-6 col-12 my-auto text-center">
             <h1 className="aparey mb-4">{product.name}</h1>
             <h3 className="montserrat mb-4">${product.price}</h3>
             <hr />
-            <button className="btn montserrat mr-4" style={style.addToCart} onClick={() => addToCart(product)}>Add to cart</button>
+            <div class="input-group mb-3 d-flex justify-content-center">
+              <div class="input-group-prepend">
+                <button class="btn" style={style.addToCart} type="button" onClick={() => setquantity(Math.max(product['quantity'], quantity-1))}>-</button>
+              </div>
+              <input disabled type="text" className='text-center' style={{width: '48px'}} value={quantity}/>
+              <div class="input-group-append">
+                <button class="btn" style={style.buyNow} type="button" onClick={() => setquantity(Math.min(product['quantity'], quantity+1))}>+</button>
+              </div>
+            </div>
+            <button className="btn montserrat mr-4" style={style.addToCart} onClick={() => addToCart(itemId, product, quantity)}>Add to cart</button>
             <button className="btn montserrat" style={style.buyNow}>Buy It Now</button>
           </div>
         </div>

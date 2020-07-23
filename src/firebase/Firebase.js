@@ -34,8 +34,25 @@ export function getCategoryProducts(category) {
   })
 }
 
+export function getLatestProducts(n) {
+  return database
+          .ref('/products')
+          .orderByKey()
+          .limitToLast(n)
+          .once('value')
+          .then(snapshot => Object.entries(snapshot.val()))
+}
+
 export function getProduct(id) {
   return database.ref('/products/' + id).once('value').then(snapshot => snapshot.val())
+}
+
+export function submitOrder(orderDetails) {
+  return database.ref('/orders').push(orderDetails)
+}
+
+export function getAllOrders() {
+  return database.ref('/orders').once('value').then(snapshot => Object.entries(snapshot.val()))
 }
 
 
@@ -49,4 +66,19 @@ description
 price
 img
 tags
+
+order:
+timestamp
+buyerDetails: {
+  first name
+  last name
+  email address
+  address
+  hp number
+}
+itemDetails: {
+  id
+  name
+  qty
+}
 */

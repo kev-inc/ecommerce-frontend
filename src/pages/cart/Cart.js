@@ -1,6 +1,6 @@
 import React from 'react'
 import CartItem from './CartItem'
-import {addNewProduct} from '../../firebase/Firebase'
+import {Link} from 'react-router-dom'
 
 function removeFromCart(item, index) {
   let cart = localStorage.getItem('cart') === null ? [] : JSON.parse(localStorage.getItem('cart'))
@@ -9,13 +9,6 @@ function removeFromCart(item, index) {
   alert(item.name + ' removed from cart!')
   window.location.reload()
 }
-
-function checkout(item) {
-  const result = addNewProduct(item)
-  console.log(result)
-}
-
-
 
 function Cart() {
 
@@ -26,16 +19,16 @@ function Cart() {
   } else {
     component = <div>
       {cart.map((item, index) => (
-        <CartItem item={item} index={index} removeFromCart={removeFromCart} />
+        <CartItem item={item.item} index={index} removeFromCart={removeFromCart} />
       ))}
       <hr />
       <div className="d-flex flex-row justify-content-end">
         <h5 className="montserrat mr-4">Subtotal</h5>
-        <h5 className="montserrat">${cart.map(item => parseInt(item.price)).reduce((total, item) => total + item)}</h5>
+        <h5 className="montserrat">${cart.map(item => parseInt(item.item.price)).reduce((total, item) => total + item)}</h5>
       </div>
       <div className="d-flex flex-row justify-content-end">
-        {/* <Link className='btn custom-btn'>Checkout</Link> */}
-        <button className="btn custom-btn" onClick={() => checkout(cart)}>Checkout</button>
+        <Link className='btn custom-btn' to='/cart/details'>Checkout</Link>
+        {/* <button className="btn custom-btn" onClick={() => checkout(cart)}>Checkout</button> */}
       </div>
     </div>
 

@@ -21,7 +21,7 @@ function addProduct(event) {
 
 function AddNewProductPage() {
   return (
-    <div id="AddNewProductPage" className='p-4'>
+    <div id="AddNewProductPage" className='container p-4'>
       <Form onSubmit={addProduct}>
         <Form.Group controlId="formName">
           <Form.Label>Name of product</Form.Label>

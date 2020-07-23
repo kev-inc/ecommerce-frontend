@@ -13,6 +13,8 @@ import SearchPage from './pages/search/SearchPage';
 import Footer from './components/Footer';
 import Cart from './pages/cart/Cart';
 import Admin from './pages/admin/Admin';
+import PersonalDetailsPage from './pages/cart/PersonalDetailsPage';
+import SubmittingOrderPage from './pages/cart/SubmittingOrderPage';
 
 function App() {
   return (
@@ -22,7 +24,9 @@ function App() {
         <Route path='/' exact component={Home} />
         <Route path='/view/:itemId' component={View} />
         <Route path='/search/:tag' component={SearchPage} />
-        <Route path='/cart' component={Cart} />
+        <Route path='/cart' exact component={Cart} />
+        <Route path='/cart/details' component={PersonalDetailsPage}/>
+        <Route path='/cart/submit' component={SubmittingOrderPage}/>
         <Route path='/admin' component={Admin} />
       </Switch>
       <Footer />

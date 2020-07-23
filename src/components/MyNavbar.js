@@ -4,6 +4,7 @@ import {Navbar, Nav} from 'react-bootstrap'
 function MyNavbar() {
   return (
     <Navbar bg="light" expand="lg">
+      <div className="container">
       <Navbar.Brand href="/" className='aparey'>la mode classique</Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
@@ -15,6 +16,8 @@ function MyNavbar() {
           <Nav.Link href="/cart">Cart</Nav.Link>
         </Nav>
       </Navbar.Collapse>
+      </div>
+     
     </Navbar>
   )
 }

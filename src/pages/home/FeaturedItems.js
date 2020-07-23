@@ -1,18 +1,26 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import ItemCard from '../../components/ItemCard'
-import { data } from '../../assets/mockdata'
+import { getLatestProducts } from '../../firebase/Firebase'
 
 function FeaturedItems() {
+  const [products, setproducts] = useState([])
+  useEffect(() => {
+    if(products.length === 0) {
+      getLatestProducts(3).then(res => {
+        setproducts(res)
+      })
+    }
+    return 
+  }, [products])
   return (
     <div id="FeaturedItems">
-      <h2>Featured Items</h2>
+      <h2>Recently Added</h2>
       <hr />
-
       <div className="grid">
         <div className="row">
-          {data.filter((item, index) => index < 3).map((item, index) => (
+          {products.map((item, index) => (
             <div className="col-md-4 col-6" key={index}>
-              <ItemCard details={item}/>
+              <ItemCard details={item[1]}/>
             </div>
           ))}
         </div>

@@ -5,10 +5,10 @@ function ItemCarousel(props) {
   const imgs = props.imgs
 
   return (
-    <Carousel>
+    <Carousel style={{maxWidth: '420px'}}>
       {imgs.map((item, index) => (
         <Carousel.Item key={index}>
-          <img className="d-block w-100" height="640px" src={item} alt='carousel'/>
+          <img className="d-block w-100" src={item} alt='carousel'/>
         </Carousel.Item>
       ))}
     </Carousel>
