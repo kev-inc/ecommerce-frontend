@@ -17,6 +17,25 @@ firebase.initializeApp(firebaseConfig)
 var database = firebase.database()
 var storage = firebase.storage()
 
+// Banner Settings
+export function getBanners() {
+  return database.ref('/banners').once('value').then(snapshot => Object.entries(snapshot.val()))
+}
+
+export function addNewBanner(title, btnText, btnLink, imgUrl) {
+	return database.ref('/banners').push({title, btnText, btnLink, imgUrl})
+}
+
+// Category Settings
+export function addNewCategory(title, link, imgUrl) {
+  return database.ref('/categories').push({title, link, imgUrl})
+}
+
+export function getCategories() {
+  return database.ref('/categories').once('value').then(snapshot => Object.entries(snapshot.val()))
+}
+
+// Upload functions
 export function uploadImage(filename, image) {
 	return storage.ref(`/images/${filename}`).put(image)
 }
@@ -25,10 +44,7 @@ export function getImageFirebaseURL(filename) {
 	return storage.ref('images').child(filename).getDownloadURL()
 }
 
-export function addNewBanner(title, btnText, btnLink, imgUrl) {
-	return database.ref('/banners').push({title, btnText, btnLink, imgUrl})
-}
-
+// Product
 export function addNewProduct(product) {
   return database.ref('/products').push(product)
 }
@@ -62,6 +78,7 @@ export function getProduct(id) {
   return database.ref('/products/' + id).once('value').then(snapshot => snapshot.val())
 }
 
+// Orders
 export function submitOrder(orderDetails) {
   return database.ref('/orders').push(orderDetails)
 }
