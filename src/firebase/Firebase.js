@@ -4,15 +4,30 @@ import * as firebase from "firebase/app";
 
 // Add the Firebase services that you want to use
 import "firebase/database";
+import "firebase/storage";
 
 var firebaseConfig = {
   apiKey: process.env.REACT_APP_FIREBASE_API,
-  databaseURL: process.env.REACT_APP_FIREBASE_DB_URL
+  databaseURL: process.env.REACT_APP_FIREBASE_DB_URL,
+  storageBucket: process.env.REACT_APP_STORAGE_BUCKET
 }
 
 firebase.initializeApp(firebaseConfig)
 
 var database = firebase.database()
+var storage = firebase.storage()
+
+export function uploadImage(filename, image) {
+	return storage.ref(`/images/${filename}`).put(image)
+}
+
+export function getImageFirebaseURL(filename) {
+	return storage.ref('images').child(filename).getDownloadURL()
+}
+
+export function addNewBanner(title, btnText, btnLink, imgUrl) {
+	return database.ref('/banners').push({title, btnText, btnLink, imgUrl})
+}
 
 export function addNewProduct(product) {
   return database.ref('/products').push(product)
